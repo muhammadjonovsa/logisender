@@ -1,0 +1,2 @@
+- [x] `TelegramClientImpl` da qurilma nomini "LogiSenderapp" ga o'zgartirish
+- [x] O'zgarishlarni tekshirish
