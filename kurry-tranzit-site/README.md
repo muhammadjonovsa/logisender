@@ -1,9 +1,20 @@
-# Kurry Tranzit Logist — landing page
+# Kurry Tranzit Logist â€” landing page
 
 Ultra-premium single-page website for **Kurry Tranzit Logist** (Uzbekistan logistics
-company). Static site — no build step, no dependencies to install.
+company). Static site â€” no build step, no dependencies to install.
 
 Stack: semantic HTML5, modern CSS, vanilla JS, Three.js r149 (vendored locally).
+
+## Live URL
+
+**https://muhammadjonovsa.github.io/logisender/**
+
+Deployed by `.github/workflows/pages.yml`, which publishes only this folder as the
+Pages artifact, so the site is served from the repository root of Pages.
+
+> If Pages is instead set to "Deploy from a branch" (`master` / root), the same files
+> are reachable at `https://muhammadjonovsa.github.io/logisender/kurry-tranzit-site/`
+> and all asset paths keep working — the markup uses relative URLs.
 
 ## Run locally
 
@@ -16,7 +27,7 @@ python -m http.server 8000
 ```
 
 Any static host works: GitHub Pages, Netlify, Vercel, Cloudflare Pages, cPanel.
-There is nothing to compile — upload the contents of this folder as-is.
+There is nothing to compile â€” upload the contents of this folder as-is.
 
 ## Files
 
@@ -35,28 +46,28 @@ robots.txt / sitemap.xml       crawler directives
 
 ## Sections
 
-`#home` (3D hero) · `#about` · `#services` · `#why` · `#mission` · `#contact`
+`#home` (3D hero) Â· `#about` Â· `#services` Â· `#why` Â· `#mission` Â· `#contact`
 
 Navigation is a single continuous page: all in-page links scroll smoothly and never
 reload or open a new tab. The only links that leave the page are the Telegram chat
-(`t.me/+998910241500`) and the two `tel:` numbers — both intentional.
+(`t.me/+998910241500`) and the two `tel:` numbers â€” both intentional.
 
 ## Contacts used in the page
 
 - Telegram: `https://t.me/+998910241500`
-- Phone: `+998 91 024 15 00` → `tel:+998910241500`
-- Phone: `+998 77 031 24 48` → `tel:+998770312448`
+- Phone: `+998 91 024 15 00` â†’ `tel:+998910241500`
+- Phone: `+998 77 031 24 48` â†’ `tel:+998770312448`
 
 ## 3D scene notes
 
-The hero scene is generated in code — no GLTF/GLB models or texture downloads, so the
+The hero scene is generated in code â€” no GLTF/GLB models or texture downloads, so the
 page stays fast and works offline. It is rendered by `assets/js/hero.js` into
 `<canvas class="hero__canvas">`, with a second, smaller scene in the About section.
 
 Degradation is handled:
 
-- no WebGL / no Three.js → CSS gradient hero with a static poster fallback
-- mobile or `prefers-reduced-motion` → the render loop stops when the hero scrolls out
+- no WebGL / no Three.js â†’ CSS gradient hero with a static poster fallback
+- mobile or `prefers-reduced-motion` â†’ the render loop stops when the hero scrolls out
   of view, and pointer parallax is disabled
 - low-power devices get a reduced particle count and fewer trucks
 
@@ -69,9 +80,9 @@ pre-filled. Wire it to a real endpoint (Formspree, your own API, Telegram bot) i
 
 ## Before going live
 
-1. Replace `https://kurrytranzitlogist.uz/` if your real domain differs — it appears in
+1. Replace `https://kurrytranzitlogist.uz/` if your real domain differs â€” it appears in
    `index.html` (`canonical`, `og:url`, `og:image`, JSON-LD) and in `robots.txt` +
    `sitemap.xml`.
 2. Update the social cover (`assets/img/og-cover.png`) if the branding changes.
-3. Set up HTTPS — the `tel:` and Telegram links assume a live site.
+3. Set up HTTPS â€” the `tel:` and Telegram links assume a live site.
 4. Re-generate `assets/img/og-cover.png` from the SVG if you edit the source.
