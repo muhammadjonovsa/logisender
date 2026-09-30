@@ -7,13 +7,13 @@ Stack: semantic HTML5, modern CSS, vanilla JS, Three.js r149 (vendored locally).
 
 ## Live URL
 
-**https://muhammadjonovsa.github.io/logisender/**
+**https://muhammadjonovsa.github.io/**
 
 Deployed by `.github/workflows/pages.yml`, which publishes only this folder as the
 Pages artifact, so the site is served from the repository root of Pages.
 
 > If Pages is instead set to "Deploy from a branch" (`master` / root), the same files
-> are reachable at `https://muhammadjonovsa.github.io/logisender/kurry-tranzit-site/`
+> are reachable at `https://muhammadjonovsa.github.io/kurry-tranzit-site/`
 > and all asset paths keep working — the markup uses relative URLs.
 
 ## Run locally
